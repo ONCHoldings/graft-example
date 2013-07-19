@@ -1,17 +1,17 @@
 // Initialize the Graft application object.
-var Graft = require('./graft');
+var Graft = require('graftjs/server');
 
 // Load up the REST api middleware. (optional)
 // 
 // Provides /api/$modelName/$id routes for all
 // registered model types, and CRUD.
-require('./middleware/REST.graft.js');
+require('graftjs/middleware/REST.graft.js');
 
 // Load up the Client middleware (optional)
 //
 // Provides the functionality that bundles up the
 // code base and distributes it to the client.
-require('./middleware/Client.graft.js');
+require('graftjs/middleware/Client.graft.js');
 
 Graft.load(__dirname);
 
