@@ -1,3 +1,3 @@
-module.exports = Backbone.Model.extend({
+module.exports = Graft.BaseModel.extend({
     urlRoot: '/api/Conference'
 });
