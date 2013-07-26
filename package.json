@@ -13,7 +13,7 @@
     "url": "https://github.com/ONCHoldings/graft-example/issues"
   },
   "dependencies": {
-    "graftjs": "~0.0.1",
+    "graftjs": "git+ssh://git@github.com:ONCHoldings/graft.js.git#master",
     "backbone": "~1.0.0",
     "jquery-browserify": "~1.8.1",
     "underscore": "~1.5.1",
