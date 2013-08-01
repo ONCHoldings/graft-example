@@ -6,20 +6,21 @@ html(lang='en')
       title
         block title
           = locals.title
-      link(rel='stylesheet', href='/css/bootstrap.css')
-      link(rel='stylesheet', href='/css/style.css')
-      style body { padding-top: 60px; }
+      link(rel='stylesheet', href='/assets/css/example.css')
 
   body
     header.navbar.navbar-fixed-top: div.navbar-inner: div.container
       a.brand(href='/')= locals.siteName
 
-    div#content.container
-      div.row
-        section#sidebar.span2
-        section#main.span10
-          block content
-          p no conference selected
+    div#main
+      section#content
+        block content
+          - var progress= 10;
+          h1.page-header Starting
+            small please wait a moment
+          .progress: .bar(style="width: #{progress}%;")
+      section#sidebar
+        block sidebar
 
     script(src='/js/vendor.js')
     script(src='/js/templates.js')

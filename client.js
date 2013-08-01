@@ -1,43 +1,40 @@
 /*jshint browser:true */
 var Graft = window.Graft = require('graftjs');
 
-var Backbone = require('backbone');
-
+var Backbone = require('backbone'),
+_  = require('underscore');
 
 Graft.addInitializer(function(options) {
-    require('./models/index.js');
-    require('./views/index.js');
-    require('./routers/index.js');
+    require('./models/Progress.graft.js');
+    require('./views/Progress.graft.js');
+    require('./views/Login.graft.js');
 });
 
 /**
  * Backbone.js client side initialization.
  */
 Graft.on('start', function(options) {
-    // start a router
-    this.appRouter = new this.$routers.App();
 
-    // Manage the initial regions
-    this.addRegions({
-        sidebar: '#sidebar',
-        main: '#main'
-    });
-    this.$state.conferences = new this.$models.Conferences();
-    this.$state.callers = new this.$models.Callers();
+    Graft.$state.progress = new Graft.$models.Progress({progress: 10});
+    function timer() {
+        var progress = Graft.$state.progress;
 
-    this.sidebar.show(new this.$views.Conferences({
-        collection: this.$state.conferences
+        if (!progress.isComplete()) {
+            progress.increment(5);
+            _.delay(timer, 200);
+        }
+    }
+    _.delay(timer, 200);
+
+
+    this.content.show(new Graft.$views.Progress({
+        model: Graft.$state.progress
     }));
 
-    this.main.show(new this.$views.Callers({
-        collection: this.$state.callers
-    }));
+    this.$state.progress.on('complete', function() {
+        this.content.show(new Graft.$views.Account());
+    }, this);
 
-    // fetch some data
-//    this.$state.conferences.fetch();
-//    this.$state.callers.fetch();
-
-    // Start the path tracking
     Backbone.history.start({push$state: true, silent: false, root: "/"});
 }, Graft);
 

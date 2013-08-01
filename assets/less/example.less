@@ -1,0 +1,17 @@
+@import 'bootstrip';
+
+// semantic bootstrap layout
+body {
+  .container;
+  #main {
+    margin-top: 60px;
+    .makeRow();
+    #sidebar {
+      .makeColumn(4);
+    }
+    #content {
+      .makeColumn(8);
+      min-height: 500px;
+    }
+  }
+}
