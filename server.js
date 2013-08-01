@@ -13,11 +13,14 @@ require('graft-bootstrap/middleware/Less.graft.js');
 // Simple closure-based data store. (optional)
 require('graft-mockdb');
 
+// Bundle a contributed library up for use on the client side (optional)
+Graft.bundle('vendor', 'Nonsense');
+
 // Parse the directory for additional code to load.
 Graft.load(__dirname);
 
 // Register the index page to be delivered to the client.
-Graft.get('/', function(req, res) {
+Graft.get('/:person?', function(req, res) {
     res.render('layout', {});
 });
 

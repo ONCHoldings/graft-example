@@ -1,10 +1,13 @@
 module.exports = Backbone.Router.extend({
     initialize: function(opt) {
+        this.listenTo(Graft, 'set:person', function(model) {
+            Backbone.history.navigate('/' + model.id, {trigger: false});
+        });
     },
     routes: {
-        '*query' : 'search'
+        ':person': 'person'
     },
-    search: function(query) {
-        // weirdly, dont need to do a thing.
+    person: function(person) {
+        Graft.execute('set:person', person);
     }
 });

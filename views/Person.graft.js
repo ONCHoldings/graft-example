@@ -1,10 +1,20 @@
 module.exports = Backbone.Marionette.ItemView.extend({
-    tagName: 'article',
-    className: 'caller',
+    tagName: 'li',
+    className: 'person',
     modelEvents: {
         'change': 'render'
     },
-    template: require('../templates/Caller.jade'),
+    triggers: {
+        "click a": "set:person"
+    },  
+    onRender: function() {
+        if (this.model.get('active')) {
+            this.$el.addClass('active');
+        } else {
+            this.$el.removeClass('active');
+        }
+    },
+    template: require('../templates/Person.jade'),
        serializeData: _.compose(
         function(data) {
             data.model = this.model;
