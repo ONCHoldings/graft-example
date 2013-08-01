@@ -13,9 +13,9 @@
     "url": "https://github.com/ONCHoldings/graft-example/issues"
   },
   "dependencies": {
-    "graftjs": "git+ssh://git@github.com:ONCHoldings/graft.js.git#master",
-    "graft-bootstrap": "git+ssh://git@github.com:ONCHoldings/graft-bootstrap.git#master",
-    "graft-mockdb": "git+ssh://git@github.com:ONCHoldings/graft-mockdb.git#master",
+    "graftjs": "git://github.com/ONCHoldings/graft.js.git#master",
+    "graft-bootstrap": "git://github.com/ONCHoldings/graft-bootstrap.git#master",
+    "graft-mockdb": "git://github.com/ONCHoldings/graft-mockdb.git#master",
     "backbone": "~1.0.0",
     "express": "~3.3.1",
     "browserify": "~2.22.0",
@@ -23,7 +23,7 @@
     "f_underscore": "~0.2.1",
     "jquery-browserify": "~1.8.1",
     "backbone.marionette": "~1.0.2",
-    "backbone.wreqr": "git+ssh://git@github.com:marionettejs/backbone.wreqr.git#master",
+    "backbone.wreqr": "git://github.com/marionettejs/backbone.wreqr.git#master",
     "socket.io": "~0.9.16",
     "request": "~2.21.0",
     "glob": "~3.2.1",
