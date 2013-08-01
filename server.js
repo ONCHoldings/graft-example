@@ -25,7 +25,7 @@ Graft.get('/:person?', function(req, res) {
 });
 
 // Start the Application, specifying some options.
-Graft.start({
+module.exports = Graft.start({
     locals: {
         siteName: 'Graft.js Example',
         title: 'Graft.js Example'
