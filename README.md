@@ -1,4 +1,4 @@
-[![Build Status](https://magnum.travis-ci.com/ONCHoldings/graft-example.png?token=b72mqMfgb1GT7zp1RCu1&branch=master)](https://magnum.travis-ci.com/ONCHoldings/graft-example)
+[![Build Status](https://travis-ci.org/ONCHoldings/graft-example.png)](https://travis-ci.org/ONCHoldings/graft-example)
 
 graft-example
 =============
