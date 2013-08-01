@@ -4,7 +4,7 @@ var utils      = require('graftjs/test/utils.js');
 var Backbone   = require('backbone');
 var testPort   = 12400;
 
-describe('vocation edge integration tests', function() {
+describe('graft-example integration tests', function() {
     this.timeout(5000);
     before(function(done) { require('../server.js').then(done); });
 
@@ -55,7 +55,7 @@ describe('vocation edge integration tests', function() {
         });
 
         it('response should be javascript', function() {
-            this.resp.should.have.header('content-type', 'text/css; charset=utf-8');
+            this.resp.should.have.header('content-type', 'text/css; charset=UTF-8');
         });
 
         it ('should have a body', function() {
