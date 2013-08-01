@@ -36,7 +36,8 @@
     "through": "~2.3.4",
     "backbone.babysitter": "0.0.6",
     "underscore.deferred": "~0.4.0",
-    "Nonsense": "~0.1.2"
+    "Nonsense": "~0.1.2",
+    "jade": "~0.34.1"
   },
   "browser": {},
   "scripts": {
