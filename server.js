@@ -5,10 +5,10 @@ var Graft = require('graftjs/server');
 require('graftjs/io/Rest.graft.js');
 
 // Bundle up the code for client side deployment (optional)
-require('graftjs/middleware/Client.graft.js');
+require('graftjs/server/Client.graft.js');
 
 // Load up the bootstrap visual base layer (optional)
-require('graft-bootstrap/middleware/Less.graft.js');
+require('graft-bootstrap/server/Less.graft.js');
 
 // Simple closure-based data store. (optional)
 require('graft-mockdb');

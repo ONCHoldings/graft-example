@@ -13,7 +13,7 @@ describe('graft-example integration tests', function() {
     });
 
     it('was able to start up', function() {
-        Graft.Middleware.Server.should.have.property('_isInitialized', true);
+        Graft.Server.should.have.property('_isInitialized', true);
     });
 
     describe('index page', function() {
