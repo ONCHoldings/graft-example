@@ -2,7 +2,7 @@
 var Graft = require('graftjs/server');
 
 // Set up REST endpoints for all models and collecitons (optional)
-require('graftjs/middleware/REST.graft.js');
+require('graftjs/io/Rest.graft.js');
 
 // Bundle up the code for client side deployment (optional)
 require('graftjs/middleware/Client.graft.js');
