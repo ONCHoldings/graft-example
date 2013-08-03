@@ -1,6 +1,6 @@
 module.exports = Backbone.Marionette.ItemView.extend({
     className: 'progress-bar',
-    template: require('../templates/ProgressBar.jade'),
+    template: require('../templates/progress-bar.jade'),
     modelEvents: {
         'change:progress' : 'progress'
     },

@@ -1,3 +1,3 @@
 module.exports = Backbone.Marionette.ItemView.extend({
-    template: require('../templates/NoPersons.jade')
+    template: require('../templates/no-persons.jade')
 });

@@ -14,7 +14,7 @@ module.exports = Backbone.Marionette.ItemView.extend({
             this.$el.removeClass('active');
         }
     },
-    template: require('../templates/Person.jade'),
+    template: require('../templates/person.jade'),
        serializeData: _.compose(
         function(data) {
             data.model = this.model;

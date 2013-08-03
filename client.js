@@ -4,18 +4,18 @@ var Backbone = require('backbone');
 var _        = require('underscore');
 
 Graft.addInitializer(function(options) {
-    require('./routers/App.graft.js');
+    require('./routers/app');
 
-    require('./models/Progress.graft.js');
-    require('./views/Progress.graft.js');
+    require('./models/progress');
+    require('./views/progress');
 
-    require('./views/Person.graft.js');
-    require('./views/PersonDetail.graft.js');
-    require('./views/Persons.graft.js');
-    require('./views/NoPersons.graft.js');
+    require('./views/person');
+    require('./views/person-detail');
+    require('./views/persons');
+    require('./views/no-persons');
 
-    require('./models/Person.graft.js');
-    require('./models/Persons.graft.js');
+    require('./models/person');
+    require('./models/persons');
 });
 
 // Custom library which will get dynamically bundled.
