@@ -8,10 +8,11 @@ require('graftjs/io/Rest.graft.js');
 require('graftjs/server/Client.graft.js');
 
 // Load up the bootstrap visual base layer (optional)
+require('graft-bootstrap/server');
 require('graft-bootstrap/server/Less.graft.js');
 
 // Simple closure-based data store. (optional)
-require('graft-mockdb');
+require('graft-mockdb/server');
 
 // Bundle a contributed library up for use on the client side (optional)
 Graft.bundle('vendor', 'Nonsense');
