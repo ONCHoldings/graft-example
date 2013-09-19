@@ -9,8 +9,9 @@ html(lang='en')
       link(rel='stylesheet', href='/assets/css/example.css')
 
   body
-    header.navbar.navbar-fixed-top: div.navbar-inner: div.container
-      a.brand(href='/')= locals.siteName
+    .navbar.navbar-default
+        .navbar-header
+            a.navbar-brand(href='/')= locals.siteName
 
     div#main
       section#content
@@ -18,7 +19,10 @@ html(lang='en')
           - var progress= 0;
           h1.page-header Starting
             small please wait a moment
-          .progress: .bar(style="width: #{progress}%;")
+          .progress
+            .progress-bar(role='progressbar', aria-valuenow='#{progress}', aria-valuemin='0', aria-valuemax='100', style="width: #{progress}%;")
+              span.sr-only Complete
+
       section#sidebar
         block sidebar
 

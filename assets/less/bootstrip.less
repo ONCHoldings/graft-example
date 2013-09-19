@@ -1,28 +1,31 @@
 // Boostrap without the stuff we don't need.
-
 // Core variables and mixins
-@import "variables.less"; // Modify this for custom colors, font-sizes, etc
+@import "variables.less";
 @import "mixins.less";
 
-// CSS Reset
-@import "reset.less";
+// Reset
+@import "normalize.less";
+@import "print.less";
 
-// Grid system and page structure
+// Core CSS
 @import "scaffolding.less";
-@import "grid.less";
-@import "layouts.less";
-
-// Base CSS
 @import "type.less";
+@import "code.less";
+@import "grid.less";
+@import "tables.less";
 @import "forms.less";
-
-// Components: Buttons & Alerts
 @import "buttons.less";
 
-// Components: Misc
-@import "progress-bars.less";
-@import "wells.less";
+// Components
 
-// Components: Nav
 @import "navs.less";
 @import "navbar.less";
+@import "progress-bars.less";
+@import "panels.less";
+@import "wells.less";
+
+
+
+// Utility classes
+@import "utilities.less";
+@import "responsive-utilities.less";
